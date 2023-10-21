@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 **/constants/index.js
+**/src/assets/
