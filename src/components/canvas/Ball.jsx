@@ -28,7 +28,7 @@ const BallCanvas = ({ icon, color }) => {
       </Suspense>
       <Preload all />
     </Canvas>
-  )
+  );
 }
 
 export default BallCanvas;
