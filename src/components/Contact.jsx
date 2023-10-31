@@ -10,40 +10,55 @@ const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
+  const [fieldError, setFieldError] = useState({ name: false, email: false, message: false });
 
   const handleChange = e => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   }
 
+  const handleError = key => {
+    setFieldError(prevFieldError => {
+      return {
+        ...prevFieldError,
+        [key]: form[key].length ? false : true
+      };
+    });
+  }
+
   const handleSubmit = e => {
     e.preventDefault();
-    setLoading(true);
-
-    emailjs.send(
-      'service_fp456dn',
-      'template_noin2um',
-      {
-        from_name: form.name,
-        to_name: 'Daniel',
-        from_email: form.email,
-        to_email: 'dcochico.20@gmail.com',
-        message: form.message
-      },
-      'ltOqS7ImsRnCm97Gt'
-    )
-    .then(() => {
-      setLoading(false);
-      alert('Thank you. I will get back to you as soon as possible.');
-      setForm({
-        name: '',
-        email: '',
-        message: ''
-      });
-    }, (error) => {
-      setLoading(false);
-      alert('Something went wrong.');
-    });
+    for (const field in form) {
+      handleError(field);
+    }
+    if (form.name.length && form.email.length && form.message.length) {
+      setLoading(true);
+      emailjs.send(
+        'service_fp456dn',
+        'template_noin2um',
+        {
+          from_name: form.name,
+          to_name: 'Daniel',
+          from_email: form.email,
+          to_email: 'dcochico.20@gmail.com',
+          message: form.message
+        },
+        'ltOqS7ImsRnCm97Gt'
+      )
+        .then(() => {
+          setLoading(false);
+          setFieldError({ name: false, email: false, message: false });
+          alert('Thank you. I will get back to you as soon as possible.');
+          setForm({
+            name: '',
+            email: '',
+            message: ''
+          });
+        }, (error) => {
+          setLoading(false);
+          alert('Something went wrong.');
+        });
+    }
   }
 
   return (
@@ -67,7 +82,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              className={`${fieldError.name ? "border border-red-500" : "border-none"} bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium`}
             />
           </label>
           <label className='flex flex-col' >
@@ -78,7 +93,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              className={`${fieldError.email ? "border border-red-500" : "border-none"} bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium`}
             />
           </label>
           <label className='flex flex-col' >
@@ -89,7 +104,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              className={`${fieldError.message ? "border border-red-500" : "border-none"} bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none font-medium`}
             />
           </label>
           <button
@@ -98,6 +113,7 @@ const Contact = () => {
           >
             {loading ? 'Sending...' : 'Send'}
           </button>
+          {(fieldError.name || fieldError.email || fieldError.message) && <p className='text-red-500 font-medium mb-4'>Please fill in all required fields.</p>}
         </form>
       </motion.div>
       <motion.div
