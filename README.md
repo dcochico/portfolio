@@ -1,4 +1,4 @@
-[Click to View Portfolio](https://portfolio-xi-virid-70.vercel.app/)
+[Click to View Portfolio](https://portfolio-dcochico.vercel.app/)
 
 ## TECHNOLOGIES USED
 <div align="center">
