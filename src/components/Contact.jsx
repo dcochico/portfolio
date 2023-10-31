@@ -113,7 +113,7 @@ const Contact = () => {
           >
             {loading ? 'Sending...' : 'Send'}
           </button>
-          {(fieldError.name || fieldError.email || fieldError.message) && <p className='text-red-500 font-medium mb-4'>Please fill in all required fields.</p>}
+          {(fieldError.name || fieldError.email || fieldError.message) && <p className='text-red-500 font-medium mb-4'>Please fill in all fields.</p>}
         </form>
       </motion.div>
       <motion.div
