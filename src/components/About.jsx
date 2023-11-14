@@ -24,7 +24,7 @@ const About = () => {
     <>
       <motion.div variants={textVariant()} >
         <p className={styles.sectionSubText} >Introduction</p>
-        <h2 className={styles.sectionHeadText} >Overview</h2>
+        <h2 className={styles.sectionHeadText} >Overview.</h2>
       </motion.div>
       <motion.p variants={fadeIn('', '', 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] '>
         Daniel is a user-centric Front End Software Engineer with a meticulous eye for detail. His background in economics and statistics provides deep insights into user behavior, and his experience in graphic design brings a creative edge to his work. Daniel is seeking a work environment that opens up the opportunity to collaborate with teams and clients worldwide. If you're in search of a professional who can blend technical proficiency with a global perspective, look no further than Daniel.

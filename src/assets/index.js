@@ -22,10 +22,8 @@ import reactrouter from "./tech/reactrouter.svg";
 import sass from "./tech/sass.svg";
 import typescript from "./tech/typescript.svg";
 
+import turing from "./company/turing.png";
 import conn from "./company/conn.jpeg";
-import meta from "./company/meta.jpeg";
-import milestone from "./company/milestone.jpeg";
-import rs from "./company/rs.jpeg";
 
 import backyarder from "./backyarder.png";
 import rancidtomatillos from "./rancidtomatillos.png";
@@ -53,10 +51,8 @@ export {
   reactrouter,
   sass,
   typescript,
+  turing,
   conn,
-  meta,
-  milestone,
-  rs,
   backyarder,
   rancidtomatillos,
   humorme,
