@@ -16,10 +16,8 @@ import {
   reactrouter,
   sass,
   typescript,
+  turing,
   conn,
-  meta,
-  milestone,
-  rs,
   backyarder,
   rancidtomatillos,
   humorme
@@ -31,8 +29,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "school",
+    title: "School",
   },
   {
     id: "contact",
@@ -116,78 +114,29 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Accounts Payable Specialist",
-    company_name: "Rudolph and Sletten",
-    icon: rs,
-    iconBg: "#e42726",
-    date: "April 2022 - February 2023",
+    title: "Frontend Software Engineering Certificate",
+    company_name: "Turing School of Software & Design",
+    icon: turing,
+    iconBg: "#e0990a",
+    date: "February 2023 - September 2023",
     points: [
-      "Reviewed, verified, and processed invoices and expense reports in a timely manner",
-      "Matched invoices to purchase orders and reconciled discrepancies",
-      "Reconciled vendor statements and managed relationships with key vendors",
-      "Assisted with month-end close and other financial reporting tasks as needed",
-      "Ensured compliance with company policies and procedures as well as accounting and legal regulations"
+      "1500 hours of programming experience over a 7-month intensive, ACCET-accredited software development program",
+      "$10,000 Scholarship Recipient",
+      "Final capstone nominated for school-wide demo competition"
     ],
   },
   {
-    title: "Screening Associate Shift Lead",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#0180fd",
-    date: "July 2020 - October 2021",
-    points: [
-      "Oversaw the daily operations of a team of 100+ screening associates",
-      "Conducted regular coaching sessions to help team members improve their skills and knowledge in screening processes and procedures",
-      "Assigned and delegated tasks to team members to ensure that all screening activities were completed accurately and on time",
-      "Implemented quality control procedures to ensure that all screening results were accurate and met company standards",
-      "Monitored the performance of screening equipment and reported any issues or malfunctions",
-      "Collaborated with Security to ensure that all screening activities aligned with company policies and procedures",
-      "Maintained accurate records of all screening activities",
-      "Collaborated with other shift leads and managers to ensure that all screening activities were completed efficiently and effectively"
-    ],
-  },
-  {
-    title: "Technician",
-    company_name: "Milestone Technologies, Inc.",
-    icon: milestone,
-    iconBg: "#2d498a",
-    date: "June 2018 - June 2020",
-    points: [
-      "Disconnected and reconnected computer hardware and peripherals in workstation or server room environments",
-      "Labeled and documented all disconnected hardware to ensure proper tracking and inventory management",
-      "Collaborated with IT to ensure that all disconnects and reconnects were properly planned and coordinated",
-      "Assisted with the setup and configuration of new workstations and servers as needed",
-    ],
-  },
-  {
-    title: "Landscape Assistant",
+    title: "BA, Economics; Mathematics; Finance",
     company_name: "Connecticut College",
     icon: conn,
     iconBg: "#00457c",
-    date: "January 2018 - March 2020",
+    date: "August 2016 - May 2020",
     points: [
-      "Helped maintain the Arboretum by mowing, pruning, planting, weeding, watering, etc.",
-      "Assisted with the planning and execution of landscaping projects, including the installation of new plants, shrubs, and trees"
+      "Activities and societies: Investment Club, Habitat for Humanity, Organic Gardening Club, Animal Rights and Equality Society, Marine Conservation Club, Chess Club, Intramural Basketball, Gaming Club",
+      "Pathway: Entrepreneurship, Social Innovation, Value and Change",
+      "Dean's High Honors"
     ],
   },
-  {
-    title: "Catering Assistant",
-    company_name: "Connecticut College",
-    icon: conn,
-    iconBg: "#00457c",
-    date: "September 2016 - March 2020",
-    points: [
-      "Assisted with the preparation, setup, and cleanup of catering events, including setting up tables and chairs, arranging table settings, and preparing food and beverages",
-      "Provided excellent customer service to guests, answered questions, and ensured their needs were met",
-      "Cleaned and maintained catering equipment and work areas to ensure proper sanitation",
-      "Assisted with the loading and unloading of catering equipment and supplies, and transported them to and from events",
-      "Assisted with the preparation of food and beverages, including preparing sauces and mixing drinks",
-      "Ensured that all catering events were set up and executed according to the specifications of the client, and made adjustments as needed",
-      "Communicated effectively with team members to ensure that all aspects of the events were coordinated and executed smoothly",
-      "Ensured that all supplies and equipment were properly maintained and stored",
-      "Maintained a positive and professional attitude at all times, even under stressful conditions"
-    ]
-  }
 ];
 
 const testimonials = [
